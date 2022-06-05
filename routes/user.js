@@ -21,6 +21,7 @@ const router = express.Router();
 // router.patch('/:userId/edit', editUser);
 // router.delete('/:userId/delete', deleteUser);
 
+
 // User accounts
 router.get('/:userId/accounts', getUserAccounts);
 router.get('/:userId/accounts/:accountId', getUserAccountbyId);

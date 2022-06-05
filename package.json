@@ -8,16 +8,23 @@
     "start": "nodemon index.js",
     "test": "mocha spec/*.js --exit"
   },
-  "keywords": [], 
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@azure/ai-form-recognizer": "^3.2.0",
+    "@azure/cognitiveservices-computervision": "^8.2.0",
+    "@azure/storage-blob": "^12.10.0",
+    "async": "^3.2.3",
     "chai": "^4.3.6",
     "chai-http": "^4.3.0",
     "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
     "express": "^4.18.1",
     "firebase": "^9.8.1",
     "mocha": "^10.0.0",
+    "multer": "^1.4.4-lts.1",
+    "multer-azure-storage": "^0.2.0",
     "nodemon": "^2.0.16"
   }
 }
