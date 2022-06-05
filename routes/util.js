@@ -45,7 +45,7 @@ const upload = multer({
     fileFilter: checkFile
 });
 
-router.post('/imageToText', upload.single('image'), invrecController.invoiceRecognizerHandler);
+router.post('/scanInvoice', upload.single('image'), invrecController.invoiceRecognizerHandler);
 
 
 export default router;

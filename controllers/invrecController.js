@@ -168,7 +168,7 @@ const invrecController = {
             await blockBlobClient.delete(options);
 
             return res.status(200).send({
-                message: 'Successfully get text from image',
+                message: 'Successfully recognized invoice',
                 data: result
             });
         } catch (error) {
