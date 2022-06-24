@@ -18,8 +18,8 @@ export const getIncomeCategoryList = async (req, res) => {
 export const getIncomeCategorybyId = async (req, res) => {
     try {
         const docRef = doc(db, 'income_category', req.params.incomeCategoryId);
-
         let result = await getDoc(docRef);
+        result = { data: result.data(), id: result.id };
         res.status(200).json(result);
     } catch (error) {
         res.status(400).send(error.message);

@@ -33,6 +33,7 @@ export const getUserIncomebyId = async (req, res) => {
     try {
         const docRef =  doc(db, 'income', req.params.incomeId);
         let result = await getDoc(docRef);
+        result = { data: result.data(), id: result.id };
         res.status(200).json(result);
     } catch (error) {
         res.status(400).send(error.message);

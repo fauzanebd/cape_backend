@@ -33,6 +33,7 @@ export const getUserExpensebyId = async (req, res) => {
     try {
         const docRef =  doc(db, 'expense', req.params.expenseId);
         let result = await getDoc(docRef);
+        result = { data: result.data(), id: result.id };
         res.status(200).json(result);
     } catch (error) {
         res.status(400).send(error.message);

@@ -19,6 +19,7 @@ export const getExpenseCategorybyId = async (req, res) => {
     try {
         const docRef = doc(db, 'expense_category', req.params.expenseCategoryId);
         let result = await getDoc(docRef);
+        result = { data: result.data(), id: result.id };
         res.status(200).json(result);
     } catch (error) {
         res.status(400).send(error.message);

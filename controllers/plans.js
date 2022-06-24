@@ -33,6 +33,7 @@ export const getUserPlanbyId = async (req, res) => {
     try {
         const docRef =  doc(db, 'plan', req.params.planId);
         let result = await getDoc(docRef);
+        result = { data: result.data(), id: result.id };
         res.status(200).json(result);
     } catch (error) {
         res.status(400).send(error.message);

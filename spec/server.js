@@ -3,6 +3,10 @@
 import chai from 'chai';
 import chaiHttp from 'chai-http';
 
+// const user_routes = "https://cape-node-backend.herokuapp.com/api/users"
+// const expense_category_routes = "https://cape-node-backend.herokuapp.com/api/expense_category"
+// const income_category_routes = "https://cape-node-backend.herokuapp.com/api/income_category"
+
 const user_routes = "http://localhost:5000/api/users"
 const expense_category_routes = "http://localhost:5000/api/expense_category"
 const income_category_routes = "http://localhost:5000/api/income_category"
