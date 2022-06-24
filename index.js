@@ -23,7 +23,9 @@ app.use(cors());
 //     res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
 // });
 
-
+app.get('/test', (req, res) => {
+    res.send('Hello World!');
+});
 app.use('/api/users', userRoutes);
 app.use('/api/expense_category', expenseCategoryRoutes);
 app.use('/api/income_category', incomeCategoryRoutes);

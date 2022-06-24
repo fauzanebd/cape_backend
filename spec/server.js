@@ -85,17 +85,17 @@ describe('PUT /api/users/:userId/accounts/:accountId', () => {
             });
     });
 });
-// Delete account
-describe('DELETE /api/users/:userId/accounts/:accountId', () => {
-    it('it should delete account by account id', (done) => {
-        chai.request(user_routes)
-            .delete('/' + user_id + '/accounts/' + account_id)
-            .end((err, res) => {
-                res.should.have.status(200);
-                done(err);
-            });
-    });
-});
+// // Delete account
+// describe('DELETE /api/users/:userId/accounts/:accountId', () => {
+//     it('it should delete account by account id', (done) => {
+//         chai.request(user_routes)
+//             .delete('/' + user_id + '/accounts/' + account_id)
+//             .end((err, res) => {
+//                 res.should.have.status(200);
+//                 done(err);
+//             });
+//     });
+// });
 
 // Test Income Categories
 
