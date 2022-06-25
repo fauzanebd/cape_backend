@@ -230,6 +230,19 @@ describe('GET /api/users/:userId/incomes/:incomeId', () => {
     });
 });
 
+// Get incomes for account
+describe('GET /api/users/:userId/incomes?account=accountId', () => {
+    it('it should get incomes for given account id', (done) => {
+        chai.request(user_routes)
+        .get('/' + user_id + '/incomes?account=' + account_id)
+        .end((err, res) => {
+            res.should.have.status(200);
+            res.body.should.be.a('array');
+            done(err);
+        });
+    });
+});
+
 // Edit income
 describe('PUT /api/users/:userId/incomes/:incomeId', () => {
     it('it should edit income by income id', (done) => {
