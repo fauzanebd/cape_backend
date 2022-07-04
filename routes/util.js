@@ -17,7 +17,7 @@ const checkFile = (req, file, cb) => {
     if (mimetype && extname) {
         return cb(null, true);
     } else {
-        cb('Error: Images Only!, you try to upload ' + file.mimetype);
+        cb('Error: Images Only!, you try to upload ' + file.mimetype + ' extname: ' + file.extname);
     }    
 }
 
