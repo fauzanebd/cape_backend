@@ -10,6 +10,7 @@ const router = express.Router();
 const checkFile = (req, file, cb) => {
     // Allowed ext
     const filetypes = /jpeg|jpg|png|gif/;
+    console.log(file);
     // check ext
     const extname = filetypes.test(path.extname(file.originalname).toLowerCase());
     const mimetype = filetypes.test(file.mimetype);
