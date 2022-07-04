@@ -17,7 +17,7 @@ const checkFile = (req, file, cb) => {
     if (mimetype && extname) {
         return cb(null, true);
     } else {
-        cb('Error: Images Only!');
+        cb('Error: Images Only!, you try to upload ' + file.mimetype);
     }    
 }
 
@@ -40,7 +40,7 @@ const azureStorage = new MulterAzureStorage({
 const upload = multer({
     storage: azureStorage,
     limits: {
-        fileSize: 2000000
+        fileSize: 3000000
     },
     fileFilter: checkFile
 });
