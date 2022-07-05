@@ -41,7 +41,7 @@ const azureStorage = new MulterAzureStorage({
 const upload = multer({
     storage: azureStorage,
     limits: {
-        fileSize: 3000000
+        fileSize: 5000000
     },
     fileFilter: checkFile
 });
